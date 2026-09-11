@@ -54,7 +54,6 @@ button {
     max-width: var(--max-width);
     margin: auto;
     padding: 18px 24px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,7 +70,6 @@ button {
 
 .nav-links {
     list-style: none;
-
     display: flex;
     gap: 28px;
 }
@@ -88,7 +86,6 @@ button {
 
 .menu-toggle {
     display: none;
-
     background: transparent;
     border: 0;
     color: var(--text);
@@ -104,10 +101,8 @@ button {
 .hero {
     min-height: 90vh;
     max-width: var(--max-width);
-
     margin: auto;
     padding: 120px 24px 100px;
-
     display: flex;
     align-items: center;
 }
@@ -147,7 +142,6 @@ button {
 .hero-text {
     max-width: 680px;
     margin-top: 20px;
-
     color: var(--muted);
     font-size: 18px;
 }
@@ -162,15 +156,11 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 12px 20px;
-
     border-radius: 8px;
     border: 1px solid var(--border);
-
     font-size: 14px;
     font-weight: 700;
-
     transition: 0.2s ease;
 }
 
@@ -257,10 +247,15 @@ button {
 
 .skill-card {
     padding: 28px;
-
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
+    transition: 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(124, 140, 255, 0.4);
 }
 
 .skill-card h3 {
@@ -277,11 +272,9 @@ button {
 .skill-list span,
 .tech-stack span {
     padding: 7px 11px;
-
     background: var(--surface-light);
     border: 1px solid var(--border);
     border-radius: 6px;
-
     color: var(--muted);
     font-size: 13px;
 }
@@ -294,16 +287,12 @@ button {
 .project-card {
     display: grid;
     grid-template-columns: 80px 1fr;
-
     gap: 25px;
-
     padding: 35px;
     margin-bottom: 20px;
-
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
-
     transition: 0.25s ease;
 }
 
@@ -326,7 +315,6 @@ button {
 .project-content > p:not(.project-label) {
     max-width: 800px;
     margin-top: 14px;
-
     color: var(--muted);
 }
 
@@ -334,7 +322,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-
     margin-top: 22px;
 }
 
@@ -346,17 +333,82 @@ button {
 
 
 /* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.certification-card {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: 0.25s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(124, 140, 255, 0.4);
+}
+
+.certification-number {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent-light);
+}
+
+.certification-label {
+    color: var(--accent-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.certification-content h3 {
+    margin-top: 8px;
+    font-size: 21px;
+}
+
+.certification-content p {
+    margin-top: 6px;
+    color: var(--muted);
+}
+
+.certification-type {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 10px;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================
    EDUCATION
 ========================= */
 
 .education-card {
     max-width: 700px;
-
     padding: 30px;
-
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
+    transition: 0.25s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(124, 140, 255, 0.4);
 }
 
 .education-card h3 {
@@ -385,7 +437,6 @@ button {
 .contact-intro {
     max-width: 650px;
     margin: -15px auto 35px;
-
     color: var(--muted);
 }
 
@@ -398,12 +449,11 @@ button {
 
 .contact-links a {
     padding: 12px 18px;
-
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-
     color: var(--muted);
+    transition: 0.2s ease;
 }
 
 .contact-links a:hover {
@@ -418,12 +468,9 @@ button {
 
 .footer {
     padding: 30px 24px;
-
     border-top: 1px solid var(--border);
-
     text-align: center;
     color: var(--muted);
-
     font-size: 13px;
 }
 
@@ -436,17 +483,13 @@ button {
 
     .nav-links {
         display: none;
-
         position: absolute;
         top: 65px;
         left: 0;
         right: 0;
-
         flex-direction: column;
         gap: 0;
-
         background: var(--surface);
-
         border-bottom: 1px solid var(--border);
     }
 
@@ -499,6 +542,15 @@ button {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-card {
+        grid-template-columns: 1fr;
+        padding: 25px;
     }
 
     .project-card {
